@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yashaswini Uddavolu | Software Engineer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #4f46e5;
+      box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.2), 0 10px 10px -5px rgba(79, 70, 229, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+    .skill-card {
+      transition: all 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.4);
+    }
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    section {
+      scroll-margin-top: 80px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-gray-800/90 backdrop-blur-sm p-4 fixed w-full top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold gradient-text">Yashaswini Uddavolu</h1>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#about" class="hover:text-indigo-400 transition">About</a>
+        <a href="#education" class="hover:text-indigo-400 transition">Education</a>
+        <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+        <a href="#achievements" class="hover:text-indigo-400 transition">Achievements</a>
+        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+      </nav>
+      <button class="md:hidden text-xl" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden bg-gray-800 mt-2 py-2 rounded-lg" id="mobile-menu">
+      <a href="#about" class="block px-4 py-2 hover:bg-gray-700">About</a>
+      <a href="#education" class="block px-4 py-2 hover:bg-gray-700">Education</a>
+      <a href="#skills" class="block px-4 py-2 hover:bg-gray-700">Skills</a>
+      <a href="#projects" class="block px-4 py-2 hover:bg-gray-700">Projects</a>
+      <a href="#achievements" class="block px-4 py-2 hover:bg-gray-700">Achievements</a>
+      <a href="#contact" class="block px-4 py-2 hover:bg-gray-700">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-4 pt-24" id="home">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div class="order-2 md:order-1 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Yashaswini Uddavolu</span></h1>
+        <h2 class="text-2xl md:text-3xl text-indigo-400 mb-6">Aspiring Software Engineer</h2>
+        <p class="text-lg text-gray-300 mb-8 max-w-2xl">
+          Problem solver with strong technical skills in multiple programming languages. Passionate about leveraging technology to create impactful solutions.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+          <a href="#contact" class="bg-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-500 transition flex items-center gap-2">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+          <a href="#projects" class="border border-indigo-500 px-6 py-3 rounded-lg hover:bg-indigo-500/10 transition flex items-center gap-2">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+        </div>
+        <div class="mt-8 flex justify-center md:justify-start gap-6">
+          <a href="https://www.linkedin.com/in/yashaswini-u-1746abc/" target="_blank" class="text-gray-400 hover:text-indigo-400 text-xl transition">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/yashu1746/yashaswiniuddavolu" target="_blank" class="text-gray-400 hover:text-indigo-400 text-xl transition">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:yashaswiniuddavvolu@gmail.com" class="text-gray-400 hover:text-indigo-400 text-xl transition">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="order-1 md:order-2">
+        <img src="images/pic.jpg" alt="Yashaswini Uddavolu" class="profile-pic">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-800/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-12 text-center">
+        <span class="gradient-text">About Me</span>
+      </h2>
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="lg:w-1/2">
+          <p class="text-gray-300 leading-relaxed mb-6">
+            I'm a dedicated Computer Science Engineering student at Sharda University with a current CGPA of 8.9. My passion lies in solving complex problems through innovative software solutions and leveraging technology to make a positive impact.
+          </p>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            With strong foundations in programming, web development, and machine learning, I enjoy tackling challenges that require both technical expertise and creative thinking. My participation in events like Smart India Hackathon reflects my ability to apply theoretical knowledge to real-world problems.
+          </p>
+          <p class="text-gray-300 leading-relaxed">
+            Beyond coding, I possess excellent soft skills including project management, teamwork, and communication, which I've demonstrated through various academic projects and team collaborations.
+          </p>
+        </div>
+        <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+          <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+            <h3 class="text-indigo-400 text-xl font-semibold mb-2">Problem Solving</h3>
+            <p class="text-gray-400">Strong analytical skills with expertise in algorithms and data structures</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+            <h3 class="text-indigo-400 text-xl font-semibold mb-2">Full Stack</h3>
+            <p class="text-gray-400">Frontend and backend development skills with modern technologies</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+            <h3 class="text-indigo-400 text-xl font-semibold mb-2">Team Player</h3>
+            <p class="text-gray-400">Proven ability to collaborate effectively in team environments</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+            <h3 class="text-indigo-400 text-xl font-semibold mb-2">Continuous Learner</h3>
+            <p class="text-gray-400">Committed to ongoing skill development and knowledge expansion</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-12 text-center">
+        <span class="gradient-text">Education</span>
+      </h2>
+      <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700 max-w-4xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+          <div>
+            <h3 class="text-2xl font-semibold text-indigo-400">B.Tech, Computer Science and Engineering</h3>
+            <p class="text-gray-300">Sharda University, Greater Noida, Delhi NCR</p>
+            <p class="text-gray-400">Sharda School of Engineering and Technology</p>
+          </div>
+          <div class="mt-4 md:mt-0">
+            <span class="bg-indigo-600/20 text-indigo-400 px-4 py-2 rounded-full">Graduating August 2027</span>
+            <span class="bg-green-600/20 text-green-400 px-4 py-2 rounded-full ml-2">CGPA: 8.9</span>
+          </div>
+        </div>
+        <div class="mt-6">
+          <h4 class="text-xl font-medium mb-3 text-gray-300">Relevant Coursework:</h4>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Software Design</span>
+            <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Programmable Logic</span>
+            <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Computer Organization</span>
+            <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Operating Systems</span>
+            <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Computer Networks</span>
+            <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Database Systems</span>
+            <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Theory of Computation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-800/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-12 text-center">
+        <span class="gradient-text">Technical Skills</span>
+      </h2>
+      
+      <div class="mb-12">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-400">Programming Languages</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fab fa-python text-4xl text-indigo-400 mb-2"></i>
+            <span>Python</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fas fa-code text-4xl text-indigo-400 mb-2"></i>
+            <span>C</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fab fa-java text-4xl text-indigo-400 mb-2"></i>
+            <span>Java</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fas fa-database text-4xl text-indigo-400 mb-2"></i>
+            <span>SQL</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mb-12">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-400">Web Development</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fab fa-html5 text-4xl text-indigo-400 mb-2"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fab fa-css3-alt text-4xl text-indigo-400 mb-2"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fab fa-js text-4xl text-indigo-400 mb-2"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fab fa-react text-4xl text-indigo-400 mb-2"></i>
+            <span>ReactJS</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fab fa-node-js text-4xl text-indigo-400 mb-2"></i>
+            <span>Node.js</span>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-indigo-400">Other Technologies & Skills</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fas fa-database text-4xl text-indigo-400 mb-2"></i>
+            <span>MongoDB</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fas fa-terminal text-4xl text-indigo-400 mb-2"></i>
+            <span>Unix</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fas fa-object-group text-4xl text-indigo-400 mb-2"></i>
+            <span>OOP</span>
+          </div>
+          <div class="skill-card bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-col items-center">
+            <i class="fas fa-project-diagram text-4xl text-indigo-400 mb-2"></i>
+            <span>Data Structures</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-12 text-center">
+        <span class="gradient-text">Projects</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Tetris Game -->
+        <div class="project-card bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition">
+          <div class="flex items-center justify-between mb-4">
+            <i class="fas fa-gamepad text-3xl text-indigo-400"></i>
+            <span class="text-xs bg-indigo-600/20 text-indigo-400 px-2 py-1 rounded-full">Python</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Tetris Game</h3>
+          <p class="text-gray-400 mb-4">Built a custom version of the classic Tetris game using Python, implementing game logic and user controls.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Python</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Game Development</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Team Project</span>
+          </div>
+        </div>
+        
+        <!-- Safety Device -->
+        <div class="project-card bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition">
+          <div class="flex items-center justify-between mb-4">
+            <i class="fas fa-shield-alt text-3xl text-indigo-400"></i>
+            <span class="text-xs bg-indigo-600/20 text-indigo-400 px-2 py-1 rounded-full">Hardware</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Safety Handheld Device for Women</h3>
+          <p class="text-gray-400 mb-4">Designed and developed a mouse-like safety device for women as part of Smart India Hackathon.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Hardware</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">JMP</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Python</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Team Lead</span>
+          </div>
+        </div>
+        
+        <!-- Event Management -->
+        <div class="project-card bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition">
+          <div class="flex items-center justify-between mb-4">
+            <i class="fas fa-calendar-alt text-3xl text-indigo-400"></i>
+            <span class="text-xs bg-indigo-600/20 text-indigo-400 px-2 py-1 rounded-full">Web Development</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">College Event Management System</h3>
+          <p class="text-gray-400 mb-4">Developing a platform to manage university programs with registration forms and submission tracking.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">HTML/CSS</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">JavaScript</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Database</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="py-20 bg-gray-800/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-12 text-center">
+        <span class="gradient-text">Achievements & Certifications</span>
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Machine Learning Certification -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <div class="flex items-start mb-4">
+            <div class="bg-indigo-600/20 p-3 rounded-lg mr-4">
+              <i class="fas fa-robot text-2xl text-indigo-400"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Machine Learning A-Z</h3>
+              <p class="text-gray-400">Udemy • 43.5 hours • May 2024</p>
+            </div>
+          </div>
+          <p class="text-gray-300">
+            Gained strong foundation in Python, machine learning algorithms, deep learning, and practical implementation. Applied knowledge in projects like the Tetris game during summer internship.
+          </p>
+        </div>
+        
+        <!-- Web Development Certification -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <div class="flex items-start mb-4">
+            <div class="bg-indigo-600/20 p-3 rounded-lg mr-4">
+              <i class="fas fa-code text-2xl text-indigo-400"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Web Development Bootcamp</h3>
+              <p class="text-gray-400">Udemy • 62.5 hours • June 2024</p>
+            </div>
+          </div>
+          <p class="text-gray-300">
+            Acquired comprehensive skills in front-end (HTML5, CSS3, JavaScript, jQuery, Bootstrap) and back-end development with Node.js, enabling full-stack web application development.
+          </p>
+        </div>
+        
+        <!-- Hackathon -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <div class="flex items-start mb-4">
+            <div class="bg-indigo-600/20 p-3 rounded-lg mr-4">
+              <i class="fas fa-trophy text-2xl text-indigo-400"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Smart India Hackathon</h3>
+              <p class="text-gray-400">New Delhi • 2023</p>
+            </div>
+          </div>
+          <p class="text-gray-300">
+            Participated in developing a handheld safety device for women, applying measurement system analysis (MSA) and authoring technical reports following IQOQPQ guides.
+          </p>
+        </div>
+        
+        <!-- Soft Skills -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <div class="flex items-start mb-4">
+            <div class="bg-indigo-600/20 p-3 rounded-lg mr-4">
+              <i class="fas fa-users text-2xl text-indigo-400"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Soft Skills</h3>
+              <p class="text-gray-400">Key Strengths</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Project Management</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Team Leadership</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Communication</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Analytical Thinking</span>
+            <span class="text-xs bg-gray-700 px-2 py-1 rounded-full">Prototyping</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-12 text-center">
+        <span class="gradient-text">Get In Touch</span>
+      </h2>
+      
+      <div class="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-indigo-400">Contact Information</h3>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="bg-indigo-600/20 p-2 rounded-lg mr-4">
+                  <i class="fas fa-envelope text-indigo-400"></i>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm">Email</p>
+                  <a href="mailto:yashaswiniuddavvolu@gmail.com" class="hover:text-indigo-400 transition">yashaswiniuddavvolu@gmail.com</a>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="bg-indigo-600/20 p-2 rounded-lg mr-4">
+                  <i class="fas fa-phone text-indigo-400"></i>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm">Phone</p>
+                  <p>+91 7095651833</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="bg-indigo-600/20 p-2 rounded-lg mr-4">
+                  <i class="fab fa-linkedin text-indigo-400"></i>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm">LinkedIn</p>
+                  <a href="https://www.linkedin.com/in/yashaswini-u-1746abc/" target="_blank" class="hover:text-indigo-400 transition">linkedin.com/in/yashaswini-u-1746abc</a>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="bg-indigo-600/20 p-2 rounded-lg mr-4">
+                  <i class="fab fa-github text-indigo-400"></i>
+                </div>
+                <div>
+                  <p class="text-gray-400 text-sm">GitHub</p>
+                  <a href="https://github.com/yashu1746/yashaswiniuddavolu" target="_blank" class="hover:text-indigo-400 transition">github.com/yashu1746</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-indigo-400">Send Me a Message</h3>
+            <form class="space-y-4">
+              <div>
+                <label for="name" class="block text-gray-400 mb-2">Your Name</label>
+                <input type="text" id="name" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+              <div>
+                <label for="email" class="block text-gray-400 mb-2">Your Email</label>
+                <input type="email" id="email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              </div>
+              <div>
+                <label for="message" class="block text-gray-400 mb-2">Message</label>
+                <textarea id="message" rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+              </div>
+              <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded-lg transition w-full">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-8 text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="https://www.linkedin.com/in/yashaswini-u-1746abc/" target="_blank" class="text-gray-400 hover:text-indigo-400 text-xl transition">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/yashu1746/yashaswiniuddavolu" target="_blank" class="text-gray-400 hover:text-indigo-400 text-xl transition">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:yashaswiniuddavvolu@gmail.com" class="text-gray-400 hover:text-indigo-400 text-xl transition">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <p class="text-gray-400 mb-2">© 2025 Yashaswini Uddavolu. All rights reserved.</p>
+      <p class="text-gray-500 text-sm">Designed with ❤️ by Yashaswini</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
